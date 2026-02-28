@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #0f1b24;
+  background-color: #f6f3ee;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --heading-font: 'Oswald', sans-serif;
+  --ink: #0f1b24;
+  --muted: #5a6b78;
+  --accent: #e85d2a;
+  --line: #e6ded4;
+
+  /* Theme-aware colors (light defaults) */
+  --bg-primary: #f6f3ee;
+  --bg-page: #f6f3ee;
+  --bg-card: #ffffff;
+  --bg-card-alt: #fffaf3;
+  --bg-surface: #fafbfc;
+  --bg-nav: rgba(246, 243, 238, 0.9);
+  --bg-footer: #111327;
+  --text-primary: #0f1b24;
+  --text-secondary: #5a6b78;
+  --text-on-dark: #ffffff;
+  --border-color: #e6ded4;
+  --shadow-color: rgba(15, 27, 36, 0.08);
+  --teal: #0b4f46;
+  --teal-dark: #0f3d3e;
+  --card-gradient: linear-gradient(160deg, rgba(255, 255, 255, 0.95), #fffaf3);
+  --grid-line-color: rgba(12, 59, 74, 0.08);
+  --partner-card-bg: linear-gradient(160deg, #ffffff 0%, #f7f7ff 100%);
+  --contact-card-bg: #ffffff;
+  --team-bg: #ffffff;
+  --panel-bg: #0f1b24;
+  --panel-text: #ffffff;
+}
+
+[data-theme="dark"] {
+  color: #e0e0e8;
+  background-color: #0d1117;
+
+  --ink: #e0e0e8;
+  --muted: #9ba4b0;
+  --line: #2a2f3a;
+
+  --bg-primary: #0d1117;
+  --bg-page: #0d1117;
+  --bg-card: #161b22;
+  --bg-card-alt: #1c2128;
+  --bg-surface: #131920;
+  --bg-nav: rgba(13, 17, 23, 0.92);
+  --bg-footer: #090c10;
+  --text-primary: #e0e0e8;
+  --text-secondary: #9ba4b0;
+  --text-on-dark: #ffffff;
+  --border-color: #2a2f3a;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --teal: #3fbfa8;
+  --teal-dark: #1a3a38;
+  --card-gradient: linear-gradient(160deg, #1c2128, #1a2332);
+  --grid-line-color: rgba(56, 139, 253, 0.06);
+  --partner-card-bg: linear-gradient(160deg, #161b22, #1a2332);
+  --contact-card-bg: #161b22;
+  --team-bg: #0d1117;
+  --panel-bg: #1c2128;
+  --panel-text: #e0e0e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px),
+    radial-gradient(circle at top, rgba(232, 93, 42, 0.08), transparent 45%),
+    radial-gradient(circle at 20% 40%, rgba(12, 59, 74, 0.08), transparent 55%),
+    var(--bg-primary);
+  background-size: 36px 36px, 36px 36px, auto, auto, auto;
+  background-position: center, center, center, center, center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] body {
+  background:
+    linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px),
+    radial-gradient(circle at top, rgba(232, 93, 42, 0.04), transparent 45%),
+    radial-gradient(circle at 20% 40%, rgba(63, 191, 168, 0.04), transparent 55%),
+    var(--bg-primary);
+  background-size: 36px 36px, 36px 36px, auto, auto, auto;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p {
+  margin: 0;
+}
